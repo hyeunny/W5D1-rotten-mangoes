@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'movies#index'
 
+  get 'search' => 'search#index'
+
   resources :movies do
     resources :reviews, only: [:new, :create]
   end
