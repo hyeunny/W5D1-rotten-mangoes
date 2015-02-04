@@ -1,0 +1,9 @@
+<h1>User List</h1>
+<%= link_to "Back to main", movies_path %>
+
+<% @users.each do |user| %>
+  <p>name: <%= user.full_name %></p>
+  <p>email: <%= user.email %></p>
+  <%= link_to "Destroy", admin_user_path(user), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-primary" %>
+  <hr>
+<% end %>

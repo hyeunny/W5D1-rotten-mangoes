@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+serialize :roles, Array
+
 has_many :reviews
 has_secure_password
 
@@ -12,7 +14,7 @@ validates :lastname,
   presence: true
 
 validates :password,
-  length: { in: 6..20 }, on: :create
+  length: { in: 4..20 }, on: :create
 
 def full_name
   "#{firstname} #{lastname}"
