@@ -6,17 +6,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+<br>
 <div class="container">
-  <% flash.each do |key, value| %>
-    <%= content_tag(:div, value) %>
-  <% end %>
-  
-  <%= yield %>
+  <div class="well">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, value) %>
+    <% end %>
+    
+    <%= yield %>
 
-  <%= render 'layouts/footer' %>
-  <%= render 'layouts/admin_footer' %>
+    <%= render 'layouts/footer' %>
+    <%= render 'layouts/admin_footer' %>
+  </div>
 </div>
 
 </body>

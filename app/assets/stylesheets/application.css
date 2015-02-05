@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: rgba(228, 106, 19, 1);
+}
+
+.bg-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
